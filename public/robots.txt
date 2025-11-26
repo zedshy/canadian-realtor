@@ -1,0 +1,18 @@
+# robots.txt for Canadian Realtor Website
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://canadianrealtor.ca/sitemap.xml
+
+# Disallow admin and API routes from indexing
+Disallow: /api/
+
+# Allow all pages
+Allow: /
+Allow: /properties
+Allow: /property/*
+Allow: /valuations
+Allow: /contact
+
