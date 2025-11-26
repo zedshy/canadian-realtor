@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { use, useState } from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -23,8 +23,9 @@ import {
   Check,
 } from 'lucide-react';
 
-export default function PropertyDetailPage({ params }: { params: { id: string } }) {
-  const property = properties.find((p) => p.id === params.id);
+export default function PropertyDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params);
+  const property = properties.find((p) => p.id === id);
 
   const [formData, setFormData] = useState({
     name: '',
