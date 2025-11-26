@@ -50,7 +50,7 @@ export default function ValuationsPage() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/valuation', {
+      const response = await fetch('/api/valuation.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

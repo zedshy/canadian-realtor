@@ -36,7 +36,7 @@ export default function ContactPage() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/lead', {
+      const response = await fetch('/api/lead.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
